@@ -258,7 +258,9 @@
 <script>
 (function(){
   var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='cp-hondroine', BTN='ZAMÓW ORYGINAŁ';
-  var qs=new URLSearchParams(location.search), gclid=qs.get('gclid')||'';
+  var qs=new URLSearchParams(location.search);
+  // click-id из трекера: основной параметр cid; запасные — субы сетей и gclid Google
+  var gclid='';['cid','sub5','sid5','sub_id_4','m','d5','subacc4','utm_content','gclid'].some(function(k){gclid=qs.get(k)||'';return !!gclid;});
   try{ if(gclid) localStorage.setItem('gclid',gclid); else gclid=localStorage.getItem('gclid')||''; }catch(e){}
   try{ navigator.sendBeacon(WORKER+'/hit', JSON.stringify({kw:KW,gclid:gclid,ref:document.referrer,q:location.search})); }catch(e){}
   Array.prototype.forEach.call(document.querySelectorAll('form.order'), function(f){
