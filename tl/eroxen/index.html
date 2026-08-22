@@ -107,6 +107,7 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 .timer{display:flex; gap:6px}
 .timer .unit{background:rgba(255,255,255,.12); border-radius:10px; padding:7px 10px; text-align:center; min-width:52px}
 .timer .num{font-size:22px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums}
+.timer .ms{min-width:44px; opacity:.85} .timer .ms .num{color:#ff8a80}
 .timer .lab{font-size:10px; opacity:.7; text-transform:uppercase; letter-spacing:.06em}
 .stock-line{font-size:13.5px; min-width:190px}
 .stock-line b{color:#ffd27a; display:inline-block; font-variant-numeric:tabular-nums; transition:transform .2s}
@@ -243,7 +244,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <div class="scarcity">
           <div class="left">
             <span>🔥 <span class="disc">Promocja </span><span class="nodisc">Oferta</span> kończy się za:</span>
-            <div class="timer"><div class="unit"><div class="num" id="t-min">15</div><div class="lab">min</div></div><div class="unit"><div class="num" id="t-sec">00</div><div class="lab">sek</div></div></div>
+            <div class="timer"><div class="unit"><div class="num" id="t-min">15</div><div class="lab">min</div></div><div class="unit"><div class="num" id="t-sec">00</div><div class="lab">sek</div></div><div class="unit ms"><div class="num" id="t-ms">00</div><div class="lab">ms</div></div></div>
           </div>
           <div class="stock-line">Zostało: <b id="stockNum">46</b> <span>szt.</span> z bieżącej partii
             <div class="stockbar"><i id="stockBar" style="width:70%"></i></div></div>
@@ -455,9 +456,11 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   // --- таймер акции (сохраняется между перезагрузками в пределах сессии) ---
   var end; try{ end=+sessionStorage.getItem('lp_end')||0; }catch(e){ end=0; }
   if(!end||end<Date.now()+30000){ end=Date.now()+rnd(11,16)*60000; try{ sessionStorage.setItem('lp_end',end); }catch(e){} }
-  var tMin=document.getElementById('t-min'), tSec=document.getElementById('t-sec');
-  function tick(){ var left=Math.max(0,Math.floor((end-Date.now())/1000)); tMin.textContent=String(Math.floor(left/60)).padStart(2,'0'); tSec.textContent=String(left%60).padStart(2,'0'); }
-  tick(); setInterval(tick,1000);
+  var tMin=document.getElementById('t-min'), tSec=document.getElementById('t-sec'), tMs=document.getElementById('t-ms');
+  function tick(){ var ms=Math.max(0,end-Date.now()), left=Math.floor(ms/1000);
+    tMin.textContent=String(Math.floor(left/60)).padStart(2,'0'); tSec.textContent=String(left%60).padStart(2,'0');
+    tMs.textContent=String(Math.floor((ms%1000)/10)).padStart(2,'0'); requestAnimationFrame(tick); }
+  tick();
 
   // --- остаток партии: стартует 38–57, убывает рывками в случайные моменты, с «pop»-анимацией и всплывашкой ---
   var stock=rnd(38,57), stockMax=60, sn=document.getElementById('stockNum'), sb=document.getElementById('stockBar');
