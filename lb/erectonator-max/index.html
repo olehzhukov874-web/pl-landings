@@ -39,6 +39,7 @@
   .pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
   .p-old{color:var(--mut);text-decoration:line-through;font-size:15px}
   .p-new{font-size:28px;font-weight:800;color:var(--warn);line-height:1}
+  .p-badge:empty,.p-old:empty{display:none}
   .p-badge{background:var(--warn);color:#fff;border-radius:5px;padding:2px 6px;font-size:11px;font-weight:700}
   .plus{list-style:none;margin-top:7px}
   .plus li{position:relative;padding:2px 0 2px 17px;font-size:12.5px;color:var(--mut)}
@@ -144,12 +145,12 @@
     <div>
       <h1>Erectonator Max® — oficjalna strona producenta w Polsce</h1>
       <div class="row">
-        <div class="shot"><span class="orig">Oryginał</span><img src="../../img/leadbit-erectonator-max.webp" alt="Erectonator Max"></div>
+        <div class="shot"><span class="orig">Gratis</span><img src="../../img/leadbit-erectonator-max.webp" alt="Erectonator Max"></div>
         <div>
           <div class="pr">
-            <span class="p-old">318 zł</span>
-            <span class="p-new">159 zł</span>
-            <span class="p-badge">-50%</span>
+            <span class="p-old"></span>
+            <span class="p-new">1 szt. GRATIS</span>
+            <span class="p-badge"></span>
           </div>
           <ul class="plus">
             <li>Oryginał od producenta</li>
@@ -164,12 +165,12 @@
       <form class="order" autocomplete="on">
         <input type="text" name="name" placeholder="Imię i nazwisko" required>
         <input type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" required>
-        <button type="submit">ZAMÓW ORYGINAŁ</button>
-        <p class="fnote">Bez przedpłaty · sprawdzasz przy kurierze</p>
+        <button type="submit">ODBIERZ GRATIS</button>
+        <p class="fnote">Płacisz tylko za dostawę — przy odbiorze</p>
       </form>
       <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
       <div class="sig">
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Płatność<br>przy odbiorze</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Produkt<br>gratis</div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Kurier / Paczkomat<br>1-3 dni</div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M9 11l1.5 1.5L13.5 9"/></svg>Sprawdzenie<br>przed zapłatą</div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 4v4h4M12 8v4l3 2"/></svg>14 dni<br>na zwrot</div>
@@ -237,13 +238,13 @@
     <h2>Zamów bezpośrednio od producenta</h2>
     <p style="color:var(--mut);font-size:13.5px;margin-bottom:12px">Wypełnij formularz, a konsultant oddzwoni w ciągu kilku minut, potwierdzi adres i termin dostawy. Bez przedpłaty.</p>
     <div class="pr" style="margin-bottom:12px">
-      <span class="p-old">318 zł</span><span class="p-new">159 zł</span>
+      <span class="p-old"></span><span class="p-new">1 szt. GRATIS</span>
     </div>
     <form class="order" autocomplete="on">
       <input type="text" name="name" placeholder="Imię i nazwisko" required>
       <input type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" required>
-      <button type="submit">ZAMÓW ORYGINAŁ</button>
-      <p class="fnote">Bez przedpłaty · sprawdzasz przy kurierze</p>
+      <button type="submit">ODBIERZ GRATIS</button>
+      <p class="fnote">Płacisz tylko za dostawę — przy odbiorze</p>
     </form>
     <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
   </section>
@@ -257,7 +258,7 @@
 
 <script>
 (function(){
-  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='lb-erectonator-max', BTN='ZAMÓW ORYGINAŁ';
+  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='lb-erectonator-max', BTN='ODBIERZ GRATIS';
   var qs=new URLSearchParams(location.search);
   // click-id из трекера: основной параметр cid; запасные — субы сетей и gclid Google
   var gclid='';['cid','sub5','sid5','sub_id_4','m','d5','subacc4','utm_content','gclid'].some(function(k){gclid=qs.get(k)||'';return !!gclid;});
