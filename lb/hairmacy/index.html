@@ -92,11 +92,20 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
   transition:border-color .15s, box-shadow .15s}
 .inp:focus{border-color:var(--accent); box-shadow:0 0 0 4px rgba(31,111,235,.12)}
 .inp.bad{border-color:var(--danger); box-shadow:0 0 0 4px rgba(229,72,77,.12)}
+.phone-field{display:flex; gap:8px; margin-bottom:10px}
+.phone-field .inp{margin-bottom:0; flex:1; min-width:0}
+.phone-field .p48{flex:none; display:flex; align-items:center; gap:4px; font-weight:800; font-size:15px; color:var(--ink); background:var(--bg-soft); border:1.5px solid #cfd8e3; border-radius:12px; padding:0 12px}
+.ph-err{display:none; font-size:12.5px; color:var(--danger); font-weight:600; margin:-4px 0 8px 2px}
+.phone-field.bad+ .ph-err{display:block}
 .form-card .btn{width:100%; font-size:18px; padding:17px}
 .form-note{font-size:12.5px; color:var(--muted); text-align:center; margin:8px 0 0}
 .today-line{font-size:13px; font-weight:700; color:var(--ok); text-align:center; margin:10px 0 0}
 .today-line b{font-variant-numeric:tabular-nums}
-.ok-msg{display:none; background:var(--ok-bg); color:var(--ok); border-radius:12px; padding:14px; text-align:center; font-weight:700; font-size:15px}
+.ok-msg{display:none; background:var(--ok-bg); border-radius:14px; padding:20px 16px; text-align:center}
+.ok-msg .ok-big{width:56px; height:56px; margin:0 auto 10px; border-radius:50%; background:var(--ok); color:#fff; display:grid; place-items:center}
+.ok-msg b{color:var(--ok); font-size:17px; display:block; margin-bottom:6px}
+.ok-msg .ok-when{color:#0c6b36; font-size:14.5px; margin:0 0 8px}
+.ok-msg .ok-keep{color:var(--muted); font-size:13px; font-weight:600; margin:0}
 .sig{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:14px}
 .sig div{font-size:11.5px; line-height:1.25; font-weight:600; color:var(--ink); text-align:center; background:var(--bg-soft); border-radius:12px; padding:10px 4px}
 .sig svg{width:22px; height:22px; display:block; margin:0 auto 6px; color:var(--accent)}
@@ -162,6 +171,15 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 .card .ic svg{width:24px; height:24px}
 .card b{display:block; font-size:15px; margin-bottom:4px} .card span{font-size:13px; color:var(--muted)}
 .guar .card{text-align:center}
+
+/* delivery */
+.deliv{margin-top:18px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; box-shadow:var(--shadow)}
+.d-head{font-size:15px; margin-bottom:12px} .d-head b{margin-right:8px} .d-head span{color:var(--muted); font-size:13px; font-weight:600}
+.d-row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+@media(max-width:720px){.d-row{grid-template-columns:1fr}}
+.d-row>div{display:flex; gap:10px; align-items:center; background:var(--bg-soft); border-radius:12px; padding:10px 12px}
+.d-row svg{width:30px; height:30px; flex:none; color:var(--accent)}
+.d-row b{display:block; font-size:14px} .d-row span{font-size:12.5px; color:var(--muted)}
 
 /* reviews */
 .rv-head{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:16px}
@@ -272,13 +290,15 @@ body.free .disc,body:not(.free) .nodisc{display:none}
             <h3>Zamów oryginalny produkt</h3>
             <div class="sub">Wypełnij formularz, a konsultant oddzwoni w ciągu kilku minut, potwierdzi adres i termin dostawy. Bez przedpłaty.</div>
             <input class="inp" type="text" name="name" placeholder="Imię i nazwisko" autocomplete="name">
-            <input class="inp" type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" autocomplete="tel">
+            <div class="phone-field"><span class="p48">🇵🇱 +48</span><input class="inp" type="tel" name="phone" placeholder="600 123 456" inputmode="numeric" autocomplete="tel"></div>
+            <p class="ph-err">Wpisz poprawny 9-cyfrowy numer telefonu</p>
             <input type="hidden" name="kw" value="lb-hairmacy">
             <button class="btn btn-primary btn-cta" type="submit">ZAMÓW ORYGINAŁ</button>
             <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
             <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze · 🔒 szyfrowanie SSL</p>
           </form>
-          <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
+          <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <b>Dziękujemy! Zamówienie zostało przyjęte.</b><p class="ok-when"></p><p class="ok-keep">🔔 Prosimy mieć telefon w pobliżu i odebrać połączenie.</p></div>
         </div>
         <div class="sig">
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Płatność<br>przy odbiorze</div>
@@ -351,6 +371,15 @@ body.free .disc,body:not(.free) .nodisc{display:none}
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><b>Dyskretna przesyłka</b><span>Wysyłamy w neutralnym opakowaniu, bez oznaczeń wskazujących na zawartość. Dane podajesz wyłącznie w celu realizacji zamówienia.</span></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><b>Potwierdzenie telefoniczne</b><span>Po wysłaniu formularza konsultant oddzwania, potwierdza zamówienie, adres i termin dostawy. Odpowie też na pytania o produkt.</span></div>
     </div>
+
+    <div class="deliv">
+      <div class="d-head">🚚 <b>Dostawa na terenie całej Polski</b><span>wysyłka w ciągu 24h · płatność przy odbiorze</span></div>
+      <div class="d-row">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/><circle cx="18" cy="6" r="1.1" fill="currentColor" stroke="none"/></svg><div><b>Paczkomat InPost</b><span>odbiór 24/7, dyskretnie</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg><div><b>Kurier DPD / DHL</b><span>pod same drzwi, 1-3 dni robocze</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 8l9 6 9-6"/></svg><div><b>Poczta Polska</b><span>odbiór w wybranej placówce</span></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -422,13 +451,15 @@ body.free .disc,body:not(.free) .nodisc{display:none}
             <h3>Zamów oryginalny produkt</h3>
             <div class="sub">Wypełnij formularz, a konsultant oddzwoni w ciągu kilku minut, potwierdzi adres i termin dostawy. Bez przedpłaty.</div>
             <input class="inp" type="text" name="name" placeholder="Imię i nazwisko" autocomplete="name">
-            <input class="inp" type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" autocomplete="tel">
+            <div class="phone-field"><span class="p48">🇵🇱 +48</span><input class="inp" type="tel" name="phone" placeholder="600 123 456" inputmode="numeric" autocomplete="tel"></div>
+            <p class="ph-err">Wpisz poprawny 9-cyfrowy numer telefonu</p>
             <input type="hidden" name="kw" value="lb-hairmacy">
             <button class="btn btn-primary btn-cta" type="submit">ZAMÓW ORYGINAŁ</button>
             <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
             <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze · 🔒 szyfrowanie SSL</p>
           </form>
-          <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
+          <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <b>Dziękujemy! Zamówienie zostało przyjęte.</b><p class="ok-when"></p><p class="ok-keep">🔔 Prosimy mieć telefon w pobliżu i odebrać połączenie.</p></div>
         </div>
       </div>
     </div>
@@ -525,16 +556,32 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   function rToday(){ Array.prototype.forEach.call(document.querySelectorAll('.todayN'),function(el){ el.textContent=today; }); }
   rToday();
 
+  // --- маска польского номера: 9 цифр национального формата «600 123 456», префиксы +48/0 срезаются
+  function phDigits(v){ var d=v.replace(/\D/g,''); if(d.slice(0,4)==='0048')d=d.slice(4); if(d.slice(0,2)==='48'&&d.length>9)d=d.slice(2); if(d[0]==='0')d=d.slice(1); return d.slice(0,9); }
+  function phFmt(d){ return d.replace(/^(\d{1,3})(\d{1,3})?(\d{1,3})?$/,function(_,a,b,c){ return a+(b?' '+b:'')+(c?' '+c:''); }); }
+  // явный мусор: не 9 цифр, все цифры одинаковые, лесенка, ведущий 0
+  function phBad(d){ return d.length!==9 || /^(\d)\1{8}$/.test(d) || d==='123456789' || d==='987654321'; }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=phone]'), function(ph){
+    ph.addEventListener('input', function(){ ph.value=phFmt(phDigits(ph.value)); ph.closest('.phone-field').classList.remove('bad'); ph.classList.remove('bad'); });
+  });
+
+  // --- «спасибо»: днём обещаем звонок ~15 минут, ночью (21:00–8:00) — завтра с 8:00 (?hour=N — для проверки)
+  var hh=qs.get('hour')!==null?+qs.get('hour'):new Date().getHours();
+  var whenTxt=(hh>=8&&hh<21)?'Konsultant zadzwoni z polskiego numeru zwykle w ciągu 15 minut, aby potwierdzić zamówienie.':'Konsultant oddzwoni jutro od 8:00, aby potwierdzić zamówienie.';
+  Array.prototype.forEach.call(document.querySelectorAll('.ok-when'),function(el){ el.textContent=whenTxt; });
+
   // --- формы → воркер (одна страница = одна сеть, маршрут по KW) ---
   Array.prototype.forEach.call(document.querySelectorAll('form.order-form'), function(f){
     f.addEventListener('submit', function(ev){
       ev.preventDefault();
       var nm=f.querySelector('[name=name]'), ph=f.querySelector('[name=phone]'), btn=f.querySelector('button'), ok=f.parentNode.querySelector('.ok-msg');
-      var badN=nm.value.trim().length<2, badP=ph.value.replace(/\D/g,'').length<9;
+      var dg=phDigits(ph.value);
+      var badN=nm.value.trim().length<2, badP=phBad(dg);
       nm.classList.toggle('bad',badN); ph.classList.toggle('bad',badP);
+      ph.closest('.phone-field').classList.toggle('bad',badP);
       if(badN||badP){ (badN?nm:ph).focus(); return; }
       btn.disabled=true; btn.textContent='Wysyłanie…';
-      var d={kw:KW,gclid:gclid,page:location.href,name:nm.value.trim(),phone:ph.value.trim()};
+      var d={kw:KW,gclid:gclid,page:location.href,name:nm.value.trim(),phone:'+48 '+phFmt(dg)};
       fetch(WORKER+'/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
         .then(function(r){return r.json();})
         .then(function(){ f.style.display='none'; if(ok) ok.style.display='block'; sticky.classList.remove('on'); })
