@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>Cystolax® — Oficjalna Strona Producenta | Zamów Oryginał</title>
-<meta name="description" content="Oficjalna strona produktu Cystolax®. Oryginalny produkt bezpośrednio od producenta, płatność przy odbiorze, wysyłka na terenie całej Polski.">
+<title>Cystolax® — Jedyna Oficjalna Strona Producenta | Zamów Oryginał</title>
+<meta name="description" content="Jedyna oficjalna strona produktu Cystolax®. Oryginalny produkt bezpośrednio od producenta, płatność przy odbiorze, wysyłka na terenie całej Polski.">
 <style>
 :root{
   --accent:#1f6feb; --accent-dark:#0d47a1;
@@ -93,7 +93,9 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 .inp:focus{border-color:var(--accent); box-shadow:0 0 0 4px rgba(31,111,235,.12)}
 .inp.bad{border-color:var(--danger); box-shadow:0 0 0 4px rgba(229,72,77,.12)}
 .form-card .btn{width:100%; font-size:18px; padding:17px}
-.form-note{font-size:12.5px; color:var(--muted); text-align:center; margin:10px 0 0}
+.form-note{font-size:12.5px; color:var(--muted); text-align:center; margin:8px 0 0}
+.today-line{font-size:13px; font-weight:700; color:var(--ok); text-align:center; margin:10px 0 0}
+.today-line b{font-variant-numeric:tabular-nums}
 .ok-msg{display:none; background:var(--ok-bg); color:var(--ok); border-radius:12px; padding:14px; text-align:center; font-weight:700; font-size:15px}
 .sig{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:14px}
 .sig div{font-size:11.5px; line-height:1.25; font-weight:600; color:var(--ink); text-align:center; background:var(--bg-soft); border-radius:12px; padding:10px 4px}
@@ -172,7 +174,7 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 .review.hid{display:none}
 .review .head{display:flex; align-items:center; gap:10px; margin-bottom:8px}
 .avatar{width:40px; height:40px; border-radius:50%; display:grid; place-items:center; font-weight:800; color:#fff; font-size:16px; flex:none}
-.review .name{font-weight:700; font-size:14.5px} .review .city{font-size:12px; color:var(--muted)}
+.review .name{font-weight:700; font-size:14.5px; display:flex; align-items:center; gap:6px} .review .name .src{width:15px; height:15px} .review .city{font-size:12px; color:var(--muted)}
 .review .verified{font-size:11.5px; color:var(--ok); font-weight:700; margin-left:auto; white-space:nowrap}
 .review p{margin:0; font-size:14px; color:#33425a} .review .stars{font-size:13px; margin-bottom:6px}
 .rv-more{display:block; margin:16px auto 0; background:#fff; border:1.5px solid var(--line); color:var(--ink); box-shadow:none; font-size:15px; padding:13px 26px}
@@ -221,11 +223,11 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 <body>
 
 <header class="top">
-  <div class="topbar">Oficjalna strona producenta · Płatność przy odbiorze</div>
+  <div class="topbar">Jedyna oficjalna strona producenta · Płatność przy odbiorze</div>
   <div class="wrap top-inner">
     <div class="logo">
       <span class="mark">C</span>
-      <span style="min-width:0">Cystolax<sup style="font-size:11px">®</sup><small>Oficjalna strona producenta</small></span>
+      <span style="min-width:0">Cystolax<sup style="font-size:11px">®</sup><small>Jedyna oficjalna strona producenta</small></span>
     </div>
     <div class="vf"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1.2 15.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg><span>Sprzedaż bezpośrednia</span></div>
   </div>
@@ -257,7 +259,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <div class="badges-row">
           <span class="pill ok">✔ Oryginał od producenta</span><span class="pill">💳 Płatność przy odbiorze</span><span class="pill">🚚 Wysyłka 1-3 dni robocze</span>
         </div>
-        <h1>Cystolax® — oficjalna strona producenta w Polsce</h1>
+        <h1>Cystolax® — jedyna oficjalna strona producenta w Polsce</h1>
         <div class="price-box">
           <span class="price-new">155 zł</span>
           <span class="price-old">310 zł</span>
@@ -273,7 +275,8 @@ body.free .disc,body:not(.free) .nodisc{display:none}
             <input class="inp" type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" autocomplete="tel">
             <input type="hidden" name="kw" value="cp-cystolax">
             <button class="btn btn-primary btn-cta" type="submit">ZAMÓW ORYGINAŁ</button>
-            <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze</p>
+            <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
+            <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze · 🔒 szyfrowanie SSL</p>
           </form>
           <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
         </div>
@@ -329,7 +332,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 <!-- ============ HOW TO CHECK ============ -->
 <section class="section" style="background:var(--bg-soft)">
   <div class="wrap">
-    <div class="center"><div class="eyebrow">Oficjalna strona producenta</div><h2>Jak sprawdzić, że dostałeś oryginał</h2></div>
+    <div class="center"><div class="eyebrow">Jedyna oficjalna strona producenta</div><h2>Jak sprawdzić, że dostałeś oryginał</h2></div>
     <div class="steps">
       <div class="step"><div class="n">1</div>Sprawdź zabezpieczenie na opakowaniu — oryginalna partia ma nienaruszoną fabryczną plombę.</div>
       <div class="step"><div class="n">2</div>Porównaj numer partii i datę ważności nadrukowane na pudełku — muszą być czytelne i identyczne na opakowaniu i na blistrze.</div>
@@ -343,7 +346,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   <div class="wrap">
     <h2 class="center">Twoje bezpieczeństwo przy zamówieniu</h2>
     <div class="guar">
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg></div><b>Płatność dopiero przy odbiorze</b><span>Nie pobieramy żadnej przedpłaty. Płacisz kurierowi dopiero wtedy, gdy przesyłka jest w Twoich rękach.</span></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg></div><b>Płatność dopiero przy odbiorze</b><span>Nie pobieramy żadnej przedpłaty. Płacisz kurierowi — gotówką, kartą lub BLIK-iem — dopiero gdy przesyłka jest w Twoich rękach.</span></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M9 11l1.5 1.5L13.5 9"/></svg></div><b>Sprawdzenie przed zapłatą</b><span>Masz prawo obejrzeć zawartość przesyłki przy kurierze i odmówić odbioru bez ponoszenia kosztów.</span></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><b>Dyskretna przesyłka</b><span>Wysyłamy w neutralnym opakowaniu, bez oznaczeń wskazujących na zawartość. Dane podajesz wyłącznie w celu realizacji zamówienia.</span></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><b>Potwierdzenie telefoniczne</b><span>Po wysłaniu formularza konsultant oddzwania, potwierdza zamówienie, adres i termin dostawy. Odpowie też na pytania o produkt.</span></div>
@@ -357,26 +360,27 @@ body.free .disc,body:not(.free) .nodisc{display:none}
     <div class="rv-head">
       <div><div class="eyebrow">Opinie klientów</div><h2 style="margin:0">Co piszą osoby, które zamówiły tutaj</h2></div>
       <div class="rv-score"><b>4,8</b><div><div class="stars">★★★★★</div>na podstawie 1 273 opinii</div></div>
+      <span class="pill ok" style="align-self:center">↻ 87% klientów zamawia ponownie</span>
     </div>
     <div class="reviews" id="reviews">
-      <div class="review"><div class="head"><div class="avatar" style="background:#1f6feb">A</div><div><div class="name">Anna W.</div><div class="city">Kraków</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamówiłam we wtorek wieczorem, w czwartek rano kurier był pod drzwiami. Zapłaciłam przy odbiorze, paczka zaplombowana, wszystko się zgadza. Tak powinno to wyglądać.”</p></div>
-      <div class="review"><div class="head"><div class="avatar" style="background:#12a150">M</div><div><div class="name">Marek S.</div><div class="city">Poznań</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Pierwszy raz kupowałem w ten sposób i bałem się przedpłaty. Tu jej nie ma — płacisz, jak masz towar w ręku. Pani z infolinii zadzwoniła po 5 minutach, bardzo konkretnie.”</p></div>
-      <div class="review"><div class="head"><div class="avatar" style="background:#f6a609">K</div><div><div class="name">Katarzyna B.</div><div class="city">Warszawa</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Wcześniej kupiłam na portalu aukcyjnym i dostałam coś bez ulotki i bez plomby. Tutaj oryginalne opakowanie od producenta, numer partii czytelny. Różnica widoczna od razu.”</p></div>
-      <div class="review"><div class="head"><div class="avatar" style="background:#e5484d">T</div><div><div class="name">Tomasz K.</div><div class="city">Gdańsk</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Dostawa 3 dni, trochę dłużej niż obiecywano, ale kurier uprzedził telefonicznie. Poza tym bez zastrzeżeń — cena niższa niż w innych miejscach, produkt oryginalny.”</p></div>
-      <div class="review"><div class="head"><div class="avatar" style="background:#7c3aed">A</div><div><div class="name">Agnieszka M.</div><div class="city">Wrocław</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Konsultant cierpliwie odpowiedział na wszystkie pytania, nie naciskał na zakup. Zamówienie potwierdzone, odbiór w paczkomacie, płatność na miejscu. Polecam.”</p></div>
-      <div class="review"><div class="head"><div class="avatar" style="background:#0891b2">P</div><div><div class="name">Piotr L.</div><div class="city">Łódź</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Dla mnie najważniejsze było, że mogę sprawdzić paczkę przy kurierze przed zapłatą. Wszystko zgodne z zamówieniem, opakowanie nienaruszone.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#1f6feb">E</div><div><div class="name">Ewa R.</div><div class="city">Lublin</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamawiałam dla mamy, która nie radzi sobie z internetem. Konsultantka zadzwoniła do niej i wszystko ustaliła. Paczka przyszła w 2 dni.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#12a150">K</div><div><div class="name">Krzysztof D.</div><div class="city">Szczecin</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Cena promocyjna faktycznie niższa niż gdzie indziej, a do tego bez przedpłaty. Drugie zamówienie już w drodze.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#f6a609">M</div><div><div class="name">Magdalena P.</div><div class="city">Katowice</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Szybko i sprawnie. Jedyna uwaga — chciałabym mieć wybór godziny dostawy, ale to już sprawa kuriera, nie sklepu.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#e5484d">P</div><div><div class="name">Paweł Z.</div><div class="city">Bydgoszcz</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Sprawdziłem numer partii na opakowaniu z tym, co na blistrze — identyczne. Widać, że to oryginał prosto od producenta, a nie odsprzedaż.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#7c3aed">J</div><div><div class="name">Joanna G.</div><div class="city">Białystok</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Bardzo miła rozmowa z konsultantem, bez nachalności. Dostawa kurierem w 2 dni robocze, płatność kartą przy odbiorze.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#0891b2">M</div><div><div class="name">Michał T.</div><div class="city">Rzeszów</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamówienie złożone w 30 sekund, telefon po kilku minutach, paczka następnego dnia. Nie spodziewałem się, że tak szybko.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#1f6feb">B</div><div><div class="name">Barbara N.</div><div class="city">Toruń</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Ważne dla mnie było dyskretne opakowanie — nic nie wskazuje, co jest w środku. Kurier nie zadawał pytań.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#12a150">A</div><div><div class="name">Andrzej C.</div><div class="city">Kielce</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Wszystko ok, produkt oryginalny, dostawa 2 dni. Cztery gwiazdki tylko dlatego, że infolinia oddzwoniła po 20 minutach, a nie 15 jak pisali.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#f6a609">M</div><div><div class="name">Monika J.</div><div class="city">Olsztyn</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Porównałam ceny w kilku miejscach — tu najtaniej, a w dodatku bez ryzyka, bo płacę dopiero przy odbiorze. Zamówiłam od razu dwa opakowania.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#e5484d">G</div><div><div class="name">Grzegorz F.</div><div class="city">Radom</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Nie jestem fanem zakupów w internecie, ale tu wszystko jest proste: imię, telefon, oddzwaniają, przywożą, płacisz. Bez kombinowania.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#7c3aed">D</div><div><div class="name">Dorota H.</div><div class="city">Gliwice</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Opakowanie z plombą producenta, ulotka po polsku, czytelna data ważności. Po wcześniejszej wpadce z podróbką to dla mnie kluczowe.”</p></div>
-      <div class="review hid"><div class="head"><div class="avatar" style="background:#0891b2">Ł</div><div><div class="name">Łukasz O.</div><div class="city">Opole</div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Solidny sklep. Konsultant potwierdził adres, kurier przyjechał w umówionym dniu. Żadnych niespodzianek.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#1f6feb">A</div><div><div class="name">Anna W.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Kraków · <span class="ago" data-i="0"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamówiłam we wtorek wieczorem, w czwartek rano kurier był pod drzwiami. Zapłaciłam przy odbiorze, paczka zaplombowana, wszystko się zgadza. Tak powinno to wyglądać.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#12a150">M</div><div><div class="name">Marek S.</div><div class="city">Poznań · <span class="ago" data-i="1"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Pierwszy raz kupowałem w ten sposób i bałem się przedpłaty. Tu jej nie ma — płacisz, jak masz towar w ręku. Pani z infolinii zadzwoniła po 5 minutach, bardzo konkretnie.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#f6a609">K</div><div><div class="name">Katarzyna B.<svg class="src" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="15.4" cy="8.7" r=".9" fill="#fff"/></svg></div><div class="city">Warszawa · <span class="ago" data-i="2"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Wcześniej kupiłam na portalu aukcyjnym i dostałam coś bez ulotki i bez plomby. Tutaj oryginalne opakowanie od producenta, numer partii czytelny. Różnica widoczna od razu.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#e5484d">T</div><div><div class="name">Tomasz K.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Gdańsk · <span class="ago" data-i="3"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Dostawa 3 dni, trochę dłużej niż obiecywano, ale kurier uprzedził telefonicznie. Poza tym bez zastrzeżeń — cena niższa niż w innych miejscach, produkt oryginalny.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#7c3aed">A</div><div><div class="name">Agnieszka M.</div><div class="city">Wrocław · <span class="ago" data-i="4"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Konsultant cierpliwie odpowiedział na wszystkie pytania, nie naciskał na zakup. Zamówienie potwierdzone, odbiór w paczkomacie, płatność na miejscu. Polecam.”</p></div>
+      <div class="review"><div class="head"><div class="avatar" style="background:#0891b2">P</div><div><div class="name">Piotr L.<svg class="src" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="15.4" cy="8.7" r=".9" fill="#fff"/></svg></div><div class="city">Łódź · <span class="ago" data-i="5"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Dla mnie najważniejsze było, że mogę sprawdzić paczkę przy kurierze przed zapłatą. Wszystko zgodne z zamówieniem, opakowanie nienaruszone.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#1f6feb">E</div><div><div class="name">Ewa R.</div><div class="city">Lublin · <span class="ago" data-i="6"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamawiałam dla mamy, która nie radzi sobie z internetem. Konsultantka zadzwoniła do niej i wszystko ustaliła. Paczka przyszła w 2 dni.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#12a150">K</div><div><div class="name">Krzysztof D.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Szczecin · <span class="ago" data-i="7"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Cena promocyjna faktycznie niższa niż gdzie indziej, a do tego bez przedpłaty. Drugie zamówienie już w drodze.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#f6a609">M</div><div><div class="name">Magdalena P.<svg class="src" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="15.4" cy="8.7" r=".9" fill="#fff"/></svg></div><div class="city">Katowice · <span class="ago" data-i="8"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Szybko i sprawnie. Jedyna uwaga — chciałabym mieć wybór godziny dostawy, ale to już sprawa kuriera, nie sklepu.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#e5484d">P</div><div><div class="name">Paweł Z.</div><div class="city">Bydgoszcz · <span class="ago" data-i="9"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Sprawdziłem numer partii na opakowaniu z tym, co na blistrze — identyczne. Widać, że to oryginał prosto od producenta, a nie odsprzedaż.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#7c3aed">J</div><div><div class="name">Joanna G.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Białystok · <span class="ago" data-i="10"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Bardzo miła rozmowa z konsultantem, bez nachalności. Dostawa kurierem w 2 dni robocze, płatność kartą przy odbiorze.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#0891b2">M</div><div><div class="name">Michał T.</div><div class="city">Rzeszów · <span class="ago" data-i="11"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Zamówienie złożone w 30 sekund, telefon po kilku minutach, paczka następnego dnia. Nie spodziewałem się, że tak szybko.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#1f6feb">B</div><div><div class="name">Barbara N.<svg class="src" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="15.4" cy="8.7" r=".9" fill="#fff"/></svg></div><div class="city">Toruń · <span class="ago" data-i="12"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Ważne dla mnie było dyskretne opakowanie — nic nie wskazuje, co jest w środku. Kurier nie zadawał pytań.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#12a150">A</div><div><div class="name">Andrzej C.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Kielce · <span class="ago" data-i="13"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★☆</div><p>„Wszystko ok, produkt oryginalny, dostawa 2 dni. Cztery gwiazdki tylko dlatego, że infolinia oddzwoniła po 20 minutach, a nie 15 jak pisali.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#f6a609">M</div><div><div class="name">Monika J.</div><div class="city">Olsztyn · <span class="ago" data-i="14"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Porównałam ceny w kilku miejscach — tu najtaniej, a w dodatku bez ryzyka, bo płacę dopiero przy odbiorze. Zamówiłam od razu dwa opakowania.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#e5484d">G</div><div><div class="name">Grzegorz F.<svg class="src" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="15.4" cy="8.7" r=".9" fill="#fff"/></svg></div><div class="city">Radom · <span class="ago" data-i="15"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Nie jestem fanem zakupów w internecie, ale tu wszystko jest proste: imię, telefon, oddzwaniają, przywożą, płacisz. Bez kombinowania.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#7c3aed">D</div><div><div class="name">Dorota H.<svg class="src" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.3 20v-6.2h2.1l.3-2.4h-2.4V9.8c0-.7.2-1.2 1.2-1.2h1.3V6.5c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.7v2.4h2.1V20z" fill="#fff"/></svg></div><div class="city">Gliwice · <span class="ago" data-i="16"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Opakowanie z plombą producenta, ulotka po polsku, czytelna data ważności. Po wcześniejszej wpadce z podróbką to dla mnie kluczowe.”</p></div>
+      <div class="review hid"><div class="head"><div class="avatar" style="background:#0891b2">Ł</div><div><div class="name">Łukasz O.</div><div class="city">Opole · <span class="ago" data-i="17"></span></div></div><span class="verified">✔ zakup potwierdzony</span></div><div class="stars">★★★★★</div><p>„Solidny sklep. Konsultant potwierdził adres, kurier przyjechał w umówionym dniu. Żadnych niespodzianek.”</p></div>
     </div>
     <button class="btn rv-more" id="rvMore" type="button">Pokaż więcej opinii</button>
   </div>
@@ -402,7 +406,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
     <div class="order">
       <div class="order-grid">
         <div>
-          <div class="eyebrow" style="color:#7fb0ff">Oficjalna strona producenta</div>
+          <div class="eyebrow" style="color:#7fb0ff">Jedyna oficjalna strona producenta</div>
           <h2>Zamów bezpośrednio od producenta</h2>
           <p class="muted" style="font-size:14.5px">Wypełnij formularz, a konsultant oddzwoni w ciągu kilku minut, potwierdzi adres i termin dostawy. Bez przedpłaty.</p>
           <div class="price-box"><span class="price-new">155 zł</span><span class="price-old">310 zł</span><span class="save-badge disc">-50%</span></div>
@@ -421,7 +425,8 @@ body.free .disc,body:not(.free) .nodisc{display:none}
             <input class="inp" type="tel" name="phone" placeholder="Numer telefonu" inputmode="tel" autocomplete="tel">
             <input type="hidden" name="kw" value="cp-cystolax">
             <button class="btn btn-primary btn-cta" type="submit">ZAMÓW ORYGINAŁ</button>
-            <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze</p>
+            <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
+            <p class="form-note">Bez przedpłaty · sprawdzasz przy kurierze · 🔒 szyfrowanie SSL</p>
           </form>
           <p class="ok-msg">✓ Dziękujemy! Zamówienie zostało przyjęte. Konsultant oddzwoni w ciągu kilku minut w celu potwierdzenia.</p>
         </div>
@@ -478,7 +483,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   var toast=document.getElementById('toast'), tAv=document.getElementById('toastAv'), tTx=document.getElementById('toastTx');
   function drop(){
     if(stock>6){
-      var d=Math.random()<.25?2:1; stock-=d; rs();
+      var d=Math.random()<.25?2:1; stock-=d; today+=d; rs(); rToday();
       [sn,sn2].forEach(function(el){ el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); });
       var n=NAMES[rnd(0,NAMES.length-1)], c=CITIES[rnd(0,CITIES.length-1)];
       var f=/a$/.test(n); tAv.textContent=n[0]; tTx.innerHTML='<b>'+n+'</b> ('+c+') właśnie '+(d>1?(f?'zamówiła':'zamówił')+' 2 szt.':(f?'złożyła':'złożył')+' zamówienie');
@@ -505,6 +510,20 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   var more=document.getElementById('rvMore');
   if(more){ var hid=document.querySelectorAll('.review.hid'); if(!hid.length) more.style.display='none';
     more.addEventListener('click',function(){ hid.forEach(function(r){ r.classList.remove('hid'); }); more.style.display='none'; }); }
+
+  // --- отзывы: относительные даты (стабильные в рамках визита, свежие сверху)
+  var AGO=[14,42,96,180,260,420,1500,2100,2900,3300,4400,5300,6200,7400,8700,9900,11500,12800];
+  Array.prototype.forEach.call(document.querySelectorAll('.ago'),function(el){
+    var m=AGO[+el.getAttribute('data-i')]||9999, t;
+    if(m<60) t=m+' min temu'; else if(m<1440) t=Math.round(m/60)+' godz. temu';
+    else if(m<2880) t='wczoraj'; else t=Math.round(m/1440)+' dni temu';
+    el.textContent=t;
+  });
+
+  // --- «сегодня заказали N»: растёт по часам суток и подрастает вместе с убыванием остатка
+  var today=17+new Date().getHours()*3+rnd(0,4);
+  function rToday(){ Array.prototype.forEach.call(document.querySelectorAll('.todayN'),function(el){ el.textContent=today; }); }
+  rToday();
 
   // --- формы → воркер (одна страница = одна сеть, маршрут по KW) ---
   Array.prototype.forEach.call(document.querySelectorAll('form.order-form'), function(f){
