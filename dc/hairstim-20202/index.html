@@ -137,6 +137,9 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 /* form card */
 .form-card{background:#fff; border:2px solid var(--accent); border-radius:18px; padding:18px; color:var(--ink); box-shadow:var(--shadow)}
 .form-card h3{margin-bottom:2px; font-size:18px}
+.howq{display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; padding:0 0 8px; margin:0; font:inherit; font-weight:800; font-size:18px; color:var(--ink); cursor:pointer; text-align:left}
+.howq .chev{font-size:16px; color:var(--accent); transition:transform .25s} .howq[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.steps4[hidden]{display:none}
 .form-card .sub{color:var(--muted); font-size:13.5px; margin-bottom:12px}
 .inp{width:100%; padding:14px 15px; border:1.5px solid #cfd8e3; border-radius:12px; font-size:16px; font-family:inherit; outline:none; margin-bottom:10px;
   transition:border-color .15s, box-shadow .15s}
@@ -311,7 +314,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <div class="product-card">
           <span class="disc-ribbon disc"></span>
           <img src="../../img/redraw-dccard-20202.webp" alt="Hairstim" width="640" height="640" fetchpriority="high" decoding="async">
-          <div><span class="ribbon">Gratis</span><div class="shotcap">Tak wygląda oryginalne opakowanie, które przywiezie kurier: plomba, numer partii, data ważności.</div></div>
+          <div><span class="ribbon">1 opakowanie w prezencie</span><div class="shotcap">Tak wygląda oryginalne opakowanie, które przywiezie kurier: plomba, numer partii, data ważności.</div></div>
         </div>
       </div>
         <div class="scarcity" id="scarcity">
@@ -328,30 +331,30 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <h1>Hairstim® — jedyna oficjalna strona producenta w Polsce</h1>
         <p class="sub-h">Hairstim prosto od producenta: bez przedpłaty, płacisz kurierowi przy odbiorze.</p>
         <div class="price-box">
-          <span class="price-new">1 szt. GRATIS</span>
+          <span class="price-new">+1 opakowanie W PREZENCIE</span>
           <span class="price-old"></span>
           <span class="save-badge disc"></span>
         </div>
-        <p class="pricenote">Promocja producenta: pierwsze opakowanie bezpłatnie, opłata wyłącznie za przesyłkę kurierską.</p>
+        <p class="pricenote">Promocja producenta: do zamówienia jedno opakowanie w prezencie. Cenę potwierdzi konsultant podczas rozmowy telefonicznej.</p>
 
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Zamów oryginalny produkt</h3>
-            <ol class="steps4"><li>Zostawiasz imię i numer telefonu</li><li>Konsultant oddzwania, potwierdza adres i termin dostawy. Bez danych karty</li><li>Kurier przywozi paczkę w ciągu 1–3 dni</li><li>Sprawdzasz paczkę przy odbiorze i płacisz kurierowi</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Jak zamówić?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Zostawiasz imię i numer telefonu</li><li>Konsultant oddzwania, potwierdza adres i termin dostawy. Bez danych karty</li><li>Kurier przywozi paczkę w ciągu 1–3 dni</li><li>Sprawdzasz paczkę przy odbiorze i płacisz kurierowi</li></ol>
             <input class="inp" type="text" name="name" placeholder="Imię i nazwisko" autocomplete="name">
             <div class="phone-field"><span class="p48">🇵🇱 +48</span><input class="inp" type="tel" name="phone" placeholder="600 123 456" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Wpisz poprawny 9-cyfrowy numer telefonu</p>
             <p class="phonewhy">Numer jest potrzebny do rozmowy potwierdzającej. Przekazujemy go tylko sprzedawcy, działowi potwierdzania zamówień i kurierowi.</p>
             <input type="hidden" name="kw" value="dc-hairstim-20202">
-            <button class="btn btn-primary btn-cta" type="submit">ODBIERZ GRATIS</button>
+            <button class="btn btn-primary btn-cta" type="submit">ZAMÓW Z PREZENTEM</button>
             <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
-            <p class="form-note">Płacisz tylko za dostawę — przy odbiorze</p>
+            <p class="form-note">Płatność przy odbiorze przesyłki; opakowanie w prezencie dotrze w tej samej paczce</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Dziękujemy! Zamówienie zostało przyjęte.</b><p class="ok-when"></p><p class="ok-keep">🔔 Prosimy mieć telefon w pobliżu i odebrać połączenie.</p></div>
         </div>
         <div class="sig">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Produkt<br>gratis</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Opakowanie<br>w prezencie</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Kurier / Paczkomat<br>1-3 dni</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M9 11l1.5 1.5L13.5 9"/></svg>Sprawdzenie<br>przed zapłatą</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Konsultant<br>oddzwoni</div>
@@ -549,7 +552,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
           <div class="eyebrow" style="color:#7fb0ff">Jedyna oficjalna strona producenta</div>
           <h2>Zamów bezpośrednio od producenta</h2>
           <p class="muted" style="font-size:14.5px">Wypełnij formularz, a konsultant oddzwoni w ciągu kilku minut, potwierdzi adres i termin dostawy. Bez przedpłaty.</p>
-          <div class="price-box"><span class="price-new">1 szt. GRATIS</span><span class="price-old"></span><span class="save-badge disc"></span></div>
+          <div class="price-box"><span class="price-new">+1 opakowanie W PREZENCIE</span><span class="price-old"></span><span class="save-badge disc"></span></div>
           <ul class="perks">
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Płatność dopiero przy odbiorze</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Sprawdzenie przed zapłatą</li>
@@ -559,16 +562,16 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         </div>
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Zamów oryginalny produkt</h3>
-            <ol class="steps4"><li>Zostawiasz imię i numer telefonu</li><li>Konsultant oddzwania, potwierdza adres i termin dostawy. Bez danych karty</li><li>Kurier przywozi paczkę w ciągu 1–3 dni</li><li>Sprawdzasz paczkę przy odbiorze i płacisz kurierowi</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Jak zamówić?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Zostawiasz imię i numer telefonu</li><li>Konsultant oddzwania, potwierdza adres i termin dostawy. Bez danych karty</li><li>Kurier przywozi paczkę w ciągu 1–3 dni</li><li>Sprawdzasz paczkę przy odbiorze i płacisz kurierowi</li></ol>
             <input class="inp" type="text" name="name" placeholder="Imię i nazwisko" autocomplete="name">
             <div class="phone-field"><span class="p48">🇵🇱 +48</span><input class="inp" type="tel" name="phone" placeholder="600 123 456" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Wpisz poprawny 9-cyfrowy numer telefonu</p>
             <p class="phonewhy">Numer jest potrzebny do rozmowy potwierdzającej. Przekazujemy go tylko sprzedawcy, działowi potwierdzania zamówień i kurierowi.</p>
             <input type="hidden" name="kw" value="dc-hairstim-20202">
-            <button class="btn btn-primary btn-cta" type="submit">ODBIERZ GRATIS</button>
+            <button class="btn btn-primary btn-cta" type="submit">ZAMÓW Z PREZENTEM</button>
             <p class="today-line">🛒 Dziś zamówiło już <b class="todayN">—</b> osób</p>
-            <p class="form-note">Płacisz tylko za dostawę — przy odbiorze</p>
+            <p class="form-note">Płatność przy odbiorze przesyłki; opakowanie w prezencie dotrze w tej samej paczce</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Dziękujemy! Zamówienie zostało przyjęte.</b><p class="ok-when"></p><p class="ok-keep">🔔 Prosimy mieć telefon w pobliżu i odebrać połączenie.</p></div>
@@ -589,7 +592,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 <script>
 (function(){
-  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='dc-hairstim-20202', KEYWORD='hairstim', BTN='ODBIERZ GRATIS';
+  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='dc-hairstim-20202', KEYWORD='hairstim', BTN='ZAMÓW Z PREZENTEM';
   if(''==='') document.body.classList.add('free');
   var qs=new URLSearchParams(location.search);
   // click-id из трекера: основной параметр cid; запасные — субы сетей и gclid Google
@@ -632,6 +635,8 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 
   // --- FAQ ---
+  // «Как заказать?» — шаги заказа раскрываются по клику (17.09)
+  Array.prototype.forEach.call(document.querySelectorAll('.howq'),function(b){ b.addEventListener('click',function(){ var ol=b.nextElementSibling, o=b.getAttribute('aria-expanded')==='true'; b.setAttribute('aria-expanded',o?'false':'true'); if(ol) ol.hidden=o; }); });
   document.querySelectorAll('.q button').forEach(function(btn){
     btn.addEventListener('click',function(){ var q=btn.parentElement, a=q.querySelector('.ans');
       if(q.classList.contains('open')){ q.classList.remove('open'); a.style.maxHeight=null; }
